@@ -3,7 +3,11 @@ package com.yoyo;
 public class Menu {
 
 	private int menuNumber;
+
+
 	private String menuName;
+
+
 	private double menuPrice;
 
 	public Menu(int menuNumber, String menuName, double menuPrice) {
@@ -17,6 +21,14 @@ public class Menu {
 		System.out.println("Menu Number: " + menuNumber + " Description: " + menuName);
 		System.out.println("---------------------------------------------------------");
 		System.out.println("Price:                    " + menuPrice);
+	}
+	
+	public String getMenuName() {
+		return menuName;
+	}
+	
+	public int getMenuNumber() {
+		return menuNumber;
 	}
 
 }

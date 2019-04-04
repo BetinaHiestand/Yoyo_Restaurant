@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ALaCarte {
 
-	List<Menu> items = new ArrayList<Menu>();
+	public static List<Menu> items = new ArrayList<Menu>();
 
 	public void addMenu(Menu menu) {
 		items.add(menu);
@@ -21,5 +21,21 @@ public class ALaCarte {
 			menu.print();
 		}
 
+	}
+	
+	public String getMenuName (int menunumber) {
+		
+		String menuName = "na";
+		
+		for (Menu menu : items) {
+			
+			if (menu.getMenuNumber() == menunumber)
+			menuName = menu.getMenuName();
+			
+		}
+		
+		return menuName ; 
+		
+		
 	}
 }
