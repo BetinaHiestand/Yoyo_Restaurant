@@ -3,8 +3,13 @@ package com.yoyo;
 import java.util.concurrent.TimeUnit;
 
 public class Creator {
+	
+	Client client = new Client("Mister X");
+	Waiter waiter = new Waiter("James");
+	ALaCarte wonderfulMenu = new ALaCarte();
+	
 
-	public void createEverything() throws InterruptedException {
+	public void createEverything(){
 
 		// Creating Breakfast
 		Breakfast eggs = new Breakfast(1, "Fried eggs", 6.50, "eggs", "none");
@@ -22,12 +27,9 @@ public class Creator {
 		Dinner fondue = new Dinner(8, "Cheese Fondue", 45.00, 4, true);
 
 		// Creating client & Waiter
-		Client client = new Client("Mister X");
-		Waiter waiter = new Waiter("James");
+		
 
 		// Adding Meals to the Menu
-		ALaCarte wonderfulMenu = new ALaCarte();
-
 		wonderfulMenu.addMenu(eggs);
 		wonderfulMenu.addMenu(pancakes);
 		wonderfulMenu.addMenu(toast);
@@ -37,6 +39,10 @@ public class Creator {
 		wonderfulMenu.addMenu(salmonPasta);
 		wonderfulMenu.addMenu(fondue);
 
+	}
+	
+	public void startVisit() throws InterruptedException {
+		
 		// Client&Waiter Interaction
 
 		client.welcome();
@@ -47,13 +53,14 @@ public class Creator {
 		TimeUnit.SECONDS.sleep(2);
 		order.showPendingOrders();
 		TimeUnit.SECONDS.sleep(5);
-		waiter.bringFood();
+		System.out.println(waiter.bringFood());
 		TimeUnit.SECONDS.sleep(2);
 		order.showPendingOrders();
 		TimeUnit.SECONDS.sleep(5);
-		client.goodbye();
-		waiter.goodbye();
-
+		System.out.print(client.goodbye());
+		System.out.print(waiter.goodbye());
+		
 	}
+	
 
 }

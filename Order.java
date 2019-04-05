@@ -21,15 +21,15 @@ public class Order {
 		Stream<Integer> stream = orderList.stream();
 
 		if (orderList.isEmpty()) {
+			System.out.println("---------------------------------");
 			System.out.println("No pending Orders");
+			System.out.println("---------------------------------");
 		} else {
 
 			stream.forEach((element) -> {
-				System.out.println(""
-						+ "---------------------------------");
-				System.out.println("Pending Menu Number: " + element + " is currently in production"); // print element
-				System.out.println(""
-						+ "---------------------------------");
+				System.out.println("---------------------------------");
+				System.out.println("Pending Menu Number: " + element + " is currently in production");
+				System.out.println("---------------------------------");
 			});
 		}
 

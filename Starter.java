@@ -7,6 +7,7 @@ public class Starter {
 	{
 		Creator create = new Creator();
 		create.createEverything();
+		create.startVisit();
 	
 		
 

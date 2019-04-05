@@ -40,8 +40,9 @@ public class Client implements Talking {
 	}
 
 	@Override
-	public void goodbye() {
-		System.out.println("Client: Thank you for the delicous food and goodbye");
+	public String goodbye() {
+		String answer = "Client: Thank you for the delicous food and goodbye";
+		return answer;
 
 	}
 

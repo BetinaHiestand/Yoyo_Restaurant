@@ -7,11 +7,11 @@ public class Waiter implements Talking {
 
 	private String name;
 	private String answer;
-	private boolean menuRequired;
 	private int menuNumber = 0;
 
 	ALaCarte carte = new ALaCarte();
 	Order order = new Order();
+	InputReader input = new InputReader();
 
 	public Waiter(String name) {
 		this.name = name;
@@ -20,7 +20,7 @@ public class Waiter implements Talking {
 	public void welcome() throws InterruptedException {
 		System.out.println(
 				"Waiter: Welcome to out cozy restaurant! My name is " + name + ". Do you want to see the menu?");
-		InputReader input = new InputReader();
+		//InputReader input = new InputReader();
 		answer = input.getInput();
 
 		if (answer.equals("YES")) {
@@ -41,7 +41,7 @@ public class Waiter implements Talking {
 		while (menuNumber == 0  ) {
 			TimeUnit.SECONDS.sleep(3);
 			System.out.println("Waiter: Which Menu-Number can I bring you? ");
-			InputReader input = new InputReader();
+			
 
 			try {
 				menuNumber = input.getInteger();
@@ -66,18 +66,21 @@ public class Waiter implements Talking {
 	}
 	}
 	
-	public void bringFood() throws InterruptedException {
+
+	public String bringFood() throws InterruptedException {
 		
 		order.getPreparedmenu();
-		System.out.println("Waiter: Your food is ready - here you go!");
+		String answer = "Waiter: Your food is ready - here you go!";
+		return answer;
+		
 		
 	}
 
 	@Override
-	public void goodbye() {
+	public String goodbye() {
 
-		System.out.println("Waiter: Thanks for your visit. Hope to see you soon!");
-
+		String answer = "Waiter: Thanks for your visit. Hope to see you soon!";
+		return answer;
 	}
 
 }
