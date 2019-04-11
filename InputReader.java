@@ -1,5 +1,7 @@
 package com.yoyo;
 
+import java.util.InputMismatchException;
+
 /**
 * The RestaurantYoYo program implements an application that
 * simulates a visit in a restaurant. 
@@ -18,7 +20,7 @@ public class InputReader {
      */
     public InputReader()
     {
-        reader = new Scanner(System.in);
+        
     }
 
     /**
@@ -29,6 +31,7 @@ public class InputReader {
      */
     public String getInput()
     {
+    	reader = new Scanner(System.in);
         String inputLine = reader.nextLine().toUpperCase();
 
         return inputLine;
@@ -41,9 +44,20 @@ public class InputReader {
 	 * @return An integer typed by the user.
 	 */
     
-    public Integer getInteger() {
-    	Integer inputNumber = reader.nextInt();
+    public int getInteger() {
+    	int inputNumber = 0;
+    	boolean okay = false;
     	
+    	while (!okay) {
+    	
+    	try {
+    		reader = new Scanner(System.in);
+    		inputNumber = reader.nextInt();	
+    		okay = true;
+    	}
+    	catch (InputMismatchException e) {
+    		System.out.println("That was not a A Number. Please try again.");
+    	}}
     	return inputNumber;
     }
 

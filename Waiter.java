@@ -59,12 +59,8 @@ public class Waiter implements Talkable {
 				TimeUnit.SECONDS.sleep(3);
 				System.out.println("Waiter: Which Menu-Number can I bring you? ");
 
-				try {
-					menuNumber = input.getInteger();
-				} catch (InputMismatchException e) {
-					System.out.println(
-							"Waiter: That was not a Menu-Number. Please tell us which Menu you would like to eat.");
-				}
+				menuNumber = input.getInteger();
+
 			}
 
 			if (menuNumber != 0) {
