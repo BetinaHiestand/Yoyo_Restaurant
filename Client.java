@@ -1,5 +1,12 @@
 package com.yoyo;
 
+/**
+* The RestaurantYoYo program implements an application that
+* simulates a visit in a restaurant. 
+*
+* @author  Betina Hiestand
+*/
+
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
@@ -12,13 +19,15 @@ public class Client implements Talking {
 	Calendar now = Calendar.getInstance();
 	int hour = now.get(Calendar.HOUR_OF_DAY);
 
-	public String getName() {
-		return name;
-	}
-
 	public Client(String name) {
 		this.name = name;
 	}
+
+	/**
+	 * Prints out a greeting depending of the current daytime and waits 2 seconds to
+	 * simulate a conversation
+	 *
+	 */
 
 	@Override
 	public void welcome() throws InterruptedException {
@@ -39,11 +48,21 @@ public class Client implements Talking {
 
 	}
 
+	/**
+	 * Contains a goodbye from the client
+	 * 
+	 * @return gives back the goodbye String
+	 */
+
 	@Override
 	public String goodbye() {
 		String answer = "Client: Thank you for the delicous food and goodbye";
 		return answer;
 
+	}
+
+	public String getName() {
+		return name;
 	}
 
 }

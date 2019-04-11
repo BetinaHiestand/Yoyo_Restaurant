@@ -1,5 +1,12 @@
 package com.yoyo;
 
+/**
+* The RestaurantYoYo program implements an application that
+* simulates a visit in a restaurant. 
+*
+* @author  Betina Hiestand
+*/
+
 import java.util.Scanner;
 
 public class InputReader {
@@ -26,6 +33,13 @@ public class InputReader {
 
         return inputLine;
     }
+    
+	/**
+	 * Read an integer from standard input (the text terminal), and return it as an
+	 * Integer.
+	 *
+	 * @return An integer typed by the user.
+	 */
     
     public Integer getInteger() {
     	Integer inputNumber = reader.nextInt();
