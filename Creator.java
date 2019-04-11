@@ -57,8 +57,8 @@ public class Creator {
 		TimeUnit.SECONDS.sleep(2);
 		order.showPendingOrders();
 		TimeUnit.SECONDS.sleep(5);
-		System.out.print(client.goodbye());
-		System.out.print(waiter.goodbye());
+		System.out.println(client.goodbye());
+		System.out.println(waiter.goodbye());
 		
 	}
 	
