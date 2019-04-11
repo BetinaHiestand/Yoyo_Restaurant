@@ -10,7 +10,7 @@ package com.yoyo;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-public class Client implements Talking {
+public class Client implements Talkable {
 
 	private String name;
 	private String daytime;

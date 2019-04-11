@@ -10,7 +10,7 @@ package com.yoyo;
 import java.util.InputMismatchException;
 import java.util.concurrent.TimeUnit;
 
-public class Waiter implements Talking {
+public class Waiter implements Talkable {
 
 	private String name;
 	private String answer;
